@@ -14,11 +14,13 @@ int globVar = 5;
 int main(void)
 {
 	pid_t pid;
-	int var = 1,i;
+	int var,i;
+	var = 1;
 
 	printf("fork is different with vfork \n");
 
-	pid = fork();
+//	pid = fork();
+	 pid =vfork();
 	switch(pid) {
 		case 0:
 			i = 3;
@@ -37,11 +39,14 @@ int main(void)
 			exit(0);
 		default:
 			i = 5;
+			printf("Parent's var = %d\n",var);
+
 			while(i-- > 0)
 			{
 				printf("Parent process is running\n");
 				globVar++;
 				var++;
+				printf("Parent's var = %d\n",var);
 				sleep(1);
 			}
 			printf("Parent's globVar = %d, var = %d\n", globVar,var);
