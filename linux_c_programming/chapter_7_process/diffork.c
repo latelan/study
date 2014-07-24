@@ -39,14 +39,12 @@ int main(void)
 			exit(0);
 		default:
 			i = 5;
-			printf("Parent's var = %d\n",var);
 
 			while(i-- > 0)
 			{
 				printf("Parent process is running\n");
 				globVar++;
 				var++;
-				printf("Parent's var = %d\n",var);
 				sleep(1);
 			}
 			printf("Parent's globVar = %d, var = %d\n", globVar,var);
