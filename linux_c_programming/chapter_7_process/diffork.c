@@ -19,8 +19,8 @@ int main(void)
 
 	printf("fork is different with vfork \n");
 
-	pid = fork();
-//	 pid =vfork();
+	//pid = fork();
+	pid =vfork();
 	switch(pid) {
 		case 0:
 			i = 3;
