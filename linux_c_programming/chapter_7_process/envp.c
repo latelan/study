@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 #include <malloc.h>
-
+/* argc-参数个数，argv-参数列表，envp-环境变量*/
 int main(int argc, char *argv[], char **envp)
 {
 	int i;
