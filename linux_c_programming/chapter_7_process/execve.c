@@ -24,7 +24,7 @@ int main(int argc, char *argv[], char **environ)
 			printf("Child process is running\n");
 			printf("My pid = %d, parentpid = %d\n",getpid(),getppid());
 			printf("uid = %d,gid = %d\n",getuid(),getpid());
-			execve("processimage",argv,environ);
+			execve("processimage",argv,environ); /* execve是系统调用 */
 			printf("process never go to here!\n");
 			exit(0);
 		default:
